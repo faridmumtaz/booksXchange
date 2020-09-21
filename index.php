@@ -63,7 +63,7 @@
                 <div class="carousel-caption d-none d-sm-block text-center mb-5">
                     <h1 class="display-3">Lorem Ipsum</h1>
                     <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vitae ducimus dolores ullam deserunt est laudantium tempora adipisci. Ex, nihil!</p>
-                    <a href="signup.php" class="btn btn-primary btn-lg">
+                    <a href="#ReadMore" class="btn btn-primary btn-lg">
                       <i class="fas fa-arrow-right"></i> Read More</a>
                 </div>
               </div>
@@ -202,6 +202,3 @@
   </body>
 </html>
 
-<?php
-
-echo "hello world"; ?>
