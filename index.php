@@ -177,14 +177,19 @@
       <section id="subscription" class="py-4">
         <div class="container">
           <h1 class="text-center text-uppercase text-primary">Subscription</h1>
-          <div class="row mb-4">
+          <div class="row mb-4 ml-5">
             <div class="col">
-
+                <h2 class="border-bottom d-flex py-2">Monthly Price <span class="text-danger ml-auto">$91</span></h2>
+                <h2 class="border-bottom py-2">Unlimited Book Landing</h2>
+                <h2 class="border-bottom py-2">Unlimited Book Share</h2>
+                <h2 class="border-bottom py-2">Cancel Any Time</h2>
+                <a href="login.php" class="btn btn-outline-primary btn-lg btn-block">Continue</a>
             </div>
           </div>
         </div>
       </section> 
 
+    <!-- COMMENT SECTION --> 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -201,4 +206,5 @@
     </script>
   </body>
 </html>
+
 
