@@ -35,9 +35,6 @@
                 <li class="nav-item">
                     <a href="about.php" class="nav-link">About</a>
                 </li>
-                <li class="nav-item">
-                    <a href="faq.php" class="nav-link">FAQ</a>
-                </li>
                 <li class="nav-item mr-5">
                     <a href="contact.php" class="nav-link">Contact</a>
                 </li>
