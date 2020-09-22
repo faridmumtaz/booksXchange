@@ -67,3 +67,12 @@ nav {
     background: #000;
     color: #fff;
   }
+
+  #subscription a {
+    text-decoration: none;
+  }
+
+  #subscription a:hover,
+  #subscription a:active {
+    color: #ccc;
+  }
