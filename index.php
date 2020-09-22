@@ -205,7 +205,7 @@
             <div class="row text-center">
                 <div class="col-md-6 mx-auto">
                     <p class="lead">
-                        Copyright &copy; <span id="year"></span>
+                        Copyright &copy; <span id="year"></span> booksXchange
                     </p>
                 </div>
             </div>
