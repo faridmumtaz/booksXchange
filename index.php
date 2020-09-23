@@ -60,7 +60,7 @@
           <div class="carousel-inner">
             <div class="carousel-item carousel-image-1 active">
               <div class="container">
-                <div class="carousel-caption d-none d-sm-block text-center mb-5">
+                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="color: #000; font-size: 32px;">
                     <h1 class="display-3">Lorem Ipsum</h1>
                     <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vitae ducimus dolores ullam deserunt est laudantium tempora adipisci. Ex, nihil!</p>
                     <a href="#ReadMore" class="btn btn-primary btn-lg">
@@ -121,7 +121,7 @@
                 <a href="about.php" class="btn btn-outline-primary btn-lg">Learn More</a>
               </div>
               <div class="col-md-6">
-                <img src="img/book_image3.jpg" alt="" class="img-fluid">
+                <img src="img/book_image3.jpg" alt="" class="img-fluid" style="border-radius: 7px;">
               </div>
             </div>
           </div>
@@ -304,7 +304,7 @@
     <!-- GET IN TOUCH SECTION --> 
     <section id="getintouch" class="py-4">
     <h3 class="text-center">Get In Touch</h3>
-      <div class="container bg-secondary p-3">
+      <div class="container p-3" style="background: #97cad2; border-radius:7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.4)">
         <div class="row">
           <div class="col-md-4">
             <div class="card p-4">
