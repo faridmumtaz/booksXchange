@@ -63,8 +63,8 @@
                 <div class="carousel-caption d-none d-sm-block text-center mb-5" style="color: #000; font-size: 32px;">
                     <h1 class="display-3">Lorem Ipsum</h1>
                     <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vitae ducimus dolores ullam deserunt est laudantium tempora adipisci. Ex, nihil!</p>
-                    <a href="#ReadMore" class="btn btn-primary btn-lg">
-                      <i class="fas fa-arrow-right"></i> Read More</a>
+                    <a href="#ReadMore" class="btn bg-primary btn-lg text-white">
+                       Read More</a>
                 </div>
               </div>
             </div>
