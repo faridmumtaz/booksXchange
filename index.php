@@ -39,7 +39,7 @@
                     <a href="contact.php" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="dashboard.php" class="nav-link">
+                    <a href="login.php" class="nav-link">
                     <i class="fas fa-sign-in-alt"></i> Login</a>
                 </li>
                 <li class="nav-item">

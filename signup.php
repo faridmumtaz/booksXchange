@@ -33,7 +33,7 @@
                     <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.php" class="nav-link active">About</a>
+                    <a href="about.php" class="nav-link">About</a>
                 </li>
                 <li class="nav-item mr-5">
                     <a href="contact.php" class="nav-link">Contact</a>
@@ -43,7 +43,7 @@
                     <i class="fas fa-sign-in-alt"></i> Login</a>
                 </li>
                 <li class="nav-item">
-                    <a href="signup.php" class="nav-link">
+                    <a href="signup.php" class="nav-link active">
                     <i class="fas fa-user-plus"></i> Sign Up</a>
                 </li>
                 </ul>
@@ -52,85 +52,43 @@
         </nav>
       <br><br>
     
-    <!-- ABOUT SECTION --> 
-    <section id="about" class="py-4">
-    <div class="container" style="background: #dcdcdc; border-radius: 7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.4)">
-      <div class="row mt-4">
-        <div class="col-md-8">
-          <h3 class="py-4">Books Exchange System</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, aut?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A incidunt fugiat quis debitis nemo possimus sequi, animi aperiam aspernatur fuga sint. Porro aliquam maxime ab placeat fugiat asperiores nostrum dolore!</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquid expedita veritatis omnis laudantium unde et hic non fuga doloremque.</p>
+    <!-- LOGIN FORM --> 
+
+    <section id="login" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <h3 class="py-4 text-center">Sign Up Form</h3>
+                    <form action="">
+                        <div class="fom-group">
+                            <label for="firstname">First name</label>
+                            <input type="text" class="form-control form-control-lg">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last name</label>
+                            <input type="text" class="form-control form-control-lg">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control form-control-lg">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control form-control-lg">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Confirm Password</label>
+                            <input type="password" class="form-control form-control-lg">
+                        </div>
+                        <input type="submit" value="Sign Up" class="btn btn-primary btn-lg btn-block">
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 align-self-center">
-          <img src="img/book_image1.jpg" alt="" class="img-fluid book-exchange__about">
-        </div>
-      </div>
-    </div>
     </section>
 
-    <!-- CONTACT SECTION --> 
-    <section id="contact__about" class="py-4">
-    
-      <div class="container p-3" style="background: #97cad2; border-radius: 7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5)">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card p-4">
-              <div class="card-body">
-                <h4>Reach Us</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <h4>Address</h4>
-                <p>Pune, Maharashtra, India</p>
-                <h4>Email</h4>
-                <p>booksXchanges@gmail.com</p>
-                <h4>Phone</h4>
-                <p>(+91) 899 999 990 0</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8">
-              <div class="card p-4">
-                <div class="card-body">
-                  <h3 class="text-center mb-4">Leave a Message</h3>
-                  <form action="">
-                    <div class="form-group">
-                      <div class="input-group input-group-lg">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text bg-primary text-white">
-                              <i class="fas fa-user"></i>
-                            </span>
-                          </div>
-                          <input type="text" class="form-control bg-dark text-white" placeholder="Name">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text bg-primary text-white">
-                            <i class="fas fa-envelope"></i>
-                          </span>
-                        </div>
-                        <input type="email" class="form-control bg-dark text-white" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="fom-group">
-                      <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text bg-primary text-white">
-                            <i class="fas fa-pencil-alt"></i>
-                          </span>
-                        </div>
-                        <textarea class="form-control bg-dark text-white" placeholder="Message"></textarea>
-                      </div>
-                      <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg mt-3">
-                    </div>
-                  </form>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <br><br>
+   
     <!-- FOOTER SECTION --> 
 
     <footer id="main-footer" class="p-4">

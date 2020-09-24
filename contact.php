@@ -33,10 +33,10 @@
                     <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.php" class="nav-link active">About</a>
+                    <a href="about.php" class="nav-link">About</a>
                 </li>
                 <li class="nav-item mr-5">
-                    <a href="contact.php" class="nav-link">Contact</a>
+                    <a href="contact.php" class="nav-link active">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a href="login.php" class="nav-link">
@@ -52,25 +52,10 @@
         </nav>
       <br><br>
     
-    <!-- ABOUT SECTION --> 
-    <section id="about" class="py-4">
-    <div class="container" style="background: #dcdcdc; border-radius: 7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.4)">
-      <div class="row mt-4">
-        <div class="col-md-8">
-          <h3 class="py-4">Books Exchange System</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, aut?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A incidunt fugiat quis debitis nemo possimus sequi, animi aperiam aspernatur fuga sint. Porro aliquam maxime ab placeat fugiat asperiores nostrum dolore!</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquid expedita veritatis omnis laudantium unde et hic non fuga doloremque.</p>
-        </div>
-        <div class="col-md-4 align-self-center">
-          <img src="img/book_image1.jpg" alt="" class="img-fluid book-exchange__about">
-        </div>
-      </div>
-    </div>
-    </section>
+   
 
     <!-- CONTACT SECTION --> 
-    <section id="contact__about" class="py-4">
+    <section id="contact__about" class="py-4 mt-5">
     
       <div class="container p-3" style="background: #97cad2; border-radius: 7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5)">
         <div class="row">
@@ -89,9 +74,9 @@
             </div>
           </div>
           <div class="col-md-8">
-              <div class="card p-4">
+              <div class="card">
                 <div class="card-body">
-                  <h3 class="text-center mb-4">Leave a Message</h3>
+                  <h3 class="text-center mb-2">Leave a Message</h3>
                   <form action="">
                     <div class="form-group">
                       <div class="input-group input-group-lg">
@@ -112,6 +97,16 @@
                         </div>
                         <input type="email" class="form-control bg-dark text-white" placeholder="Email">
                       </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-primary text-white">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control bg-dark text-white" placeholder="Phone">
+                        </div>
                     </div>
                     <div class="fom-group">
                       <div class="input-group input-group-lg">
