@@ -23,13 +23,13 @@ nav {
     border-left: #444 3px solid;
   }
 .carousel-item {
-    height: 400px;
+    height: 500px;
   }
 
   .carousel-image-1 {
     background: url('../img/book_image1.jpg');
     background-size: cover;
-    margin: 0; 
+    margin-top: 100px; 
     padding: 10px;
     top: 0;
     left: 0;
