@@ -35,14 +35,11 @@
                 <li class="nav-item">
                     <a href="about.php" class="nav-link">About</a>
                 </li>
-                <li class="nav-item">
-                    <a href="faq.php" class="nav-link">FAQ</a>
-                </li>
                 <li class="nav-item mr-5">
                     <a href="contact.php" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="dashboard.php" class="nav-link">
+                    <a href="login.php" class="nav-link">
                     <i class="fas fa-sign-in-alt"></i> Login</a>
                 </li>
                 <li class="nav-item">
@@ -63,11 +60,11 @@
           <div class="carousel-inner">
             <div class="carousel-item carousel-image-1 active">
               <div class="container">
-                <div class="carousel-caption d-none d-sm-block text-center mb-5">
+                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="color: #000; font-size: 32px;">
                     <h1 class="display-3">Lorem Ipsum</h1>
                     <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vitae ducimus dolores ullam deserunt est laudantium tempora adipisci. Ex, nihil!</p>
-                    <a href="#ReadMore" class="btn btn-primary btn-lg">
-                      <i class="fas fa-arrow-right"></i> Read More</a>
+                    <a href="#ReadMore" class="btn bg-primary btn-lg text-white">
+                       Read More</a>
                 </div>
               </div>
             </div>
@@ -124,7 +121,7 @@
                 <a href="about.php" class="btn btn-outline-primary btn-lg">Learn More</a>
               </div>
               <div class="col-md-6">
-                <img src="img/book_image3.jpg" alt="" class="img-fluid">
+                <img src="img/book_image3.jpg" alt="" class="img-fluid" style="border-radius: 7px;">
               </div>
             </div>
           </div>
@@ -192,11 +189,180 @@
         </div>
       </section> 
 
+
     <!-- COMMENT SECTION --> 
-
-
+    
+    <!-- FAQ SECTION --> 
+    <section id="faq" class="bg-light py-4">
+      <div class="container">
+      <h1 class="display-3 text-center">FAQ</h1>
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <!-- ACCORDION --> 
+                <div id="accordion">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>
+                        <a href="#Question1" data-toggle="collapse" data-parent="#accordion">Question One ... Lorem ipsum dolor sit.</a>
+                      </h5>
+                    </div>
+                    <div id="Question1" class="collapse">
+                      <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- ACCORDION --> 
+                <div id="accordion">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>
+                        <a href="#Question2" data-toggle="collapse" data-parent="#accordion">Question Two ... Lorem ipsum dolor sit.</a>
+                      </h5>
+                    </div>
+                    <div id="Question2" class="collapse">
+                      <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+              <div id="accordion">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>
+                        <a href="#Question3" data-toggle="collapse" data-parent="#accordion">Question Three ... Lorem ipsum dolor sit.</a>
+                    </h5>
+                  </div>
+                  <div id="Question3" class="collapse">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-4">
+              <div id="accordion">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>
+                      <a href="#Question4" data-toggle="collapse" data-parent="#accordion">Question Four ... Lorem ipsum dolor sit.</a>
+                    </h5>
+                  </div>
+                  <div id="Question4" class="collapse">
+                    <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header">
+                  <h5>
+                    <a href="#Question5" data-toggle="collapse" data-parent="#accordion">Question Five ... Lorem ipsum dolor sit.</a>
+                  </h5>
+                </div>
+                <div id="Question5" class="collapse">
+                  <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="col-md-4">
+              <div id="accordion">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>
+                      <a href="#Question6" data-toggle="collapse" data-parent="#accordion">Question Six ... Lorem ipsum dolor sit.</a>
+                    </h5>
+                  </div>
+                  <div id="Question6" class="collapse">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, iusto!
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- GET IN TOUCH SECTION --> 
-
+    <section id="getintouch" class="py-4">
+    <h3 class="text-center">Get In Touch</h3>
+      <div class="container p-3" style="background: #97cad2; border-radius:7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.4)">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card p-4">
+              <div class="card-body">
+                <h4>Get In Touch</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h4>Address</h4>
+                <p>Pune, Maharashtra, India</p>
+                <h4>Email</h4>
+                <p>booksXchanges@gmail.com</p>
+                <h4>Phone</h4>
+                <p>(+91) 899 999 990 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+              <div class="card p-4">
+                <div class="card-body">
+                  <h3 class="text-center mb-4">Leave a Message</h3>
+                  <form action="">
+                    <div class="form-group">
+                      <div class="input-group input-group-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text bg-primary text-white">
+                              <i class="fas fa-user"></i>
+                            </span>
+                          </div>
+                          <input type="text" class="form-control bg-dark text-white" placeholder="Name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text bg-primary text-white">
+                            <i class="fas fa-envelope"></i>
+                          </span>
+                        </div>
+                        <input type="email" class="form-control bg-dark text-white" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="fom-group">
+                      <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text bg-primary text-white">
+                            <i class="fas fa-pencil-alt"></i>
+                          </span>
+                        </div>
+                        <textarea class="form-control bg-dark text-white" placeholder="Message"></textarea>
+                      </div>
+                      <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg mt-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER SECTION --> 
 
