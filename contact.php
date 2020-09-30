@@ -128,7 +128,7 @@
     </section>
     <!-- FOOTER SECTION --> 
 
-    <footer id="main-footer" class="p-4">
+    <footer id="main-footer" class="p-4 fixed-bottom">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-6 mx-auto">
