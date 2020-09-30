@@ -1,3 +1,21 @@
+<?php
+	session_start();
+	require "dbcon/dbcon.php";
+	if(isset($_POST["submit"]))
+	{
+		$resultset = mysqli_query($con,"SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = PASSWORD(".$_POST["password"].")");
+		if(mysqli_num_rows($resultset) == 1)
+		{
+			$record = mysqli_fetch_assoc($resultset);
+			$_SESSION["user_login"] = $record["user_id"];
+			header("location:user/main.php");
+		}
+		else
+		{
+			echo "<span> incorrect username or password </span>";
+		}
+	}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -59,17 +77,17 @@
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <h3 class="py-4 text-center">Login Form</h3>
-                    <form action="">
+                    <form action="" method="post">
                         <div class="fom-group">
                             <input type="text" class="form-control form-control-lg mb-3" placeholder="Name">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-lg mb-3" placeholder="Email">
+                            <input type="email" class="form-control form-control-lg mb-3" placeholder="Email" name="email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control form-control-lg mb-3" placeholder="Password">
+                            <input type="password" class="form-control form-control-lg mb-3" placeholder="Password" name="password">
                         </div>
-                        <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">
+                        <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block" name="submit">
                     </form>
                 </div>
             </div>

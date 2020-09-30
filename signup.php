@@ -1,3 +1,28 @@
+<?php
+	require "dbcon/dbcon.php";
+	if(isset($_POST["submit"]))
+	{
+		if(mysqli_num_rows(mysqli_query($con,"SELECT * FROM user WHERE email = '".$_POST["email"]."'")) == 1)
+		{
+			echo "<span> email already exist </span>";
+		}
+		else 
+		{
+			if(mysqli_query($con,"INSERT INTO user VALUES(null,'".$_POST["email"]."',PASSWORD(".$_POST["password"]."),'".$_POST["firstname"]."','".$_POST["lastname"]."',null,'address',null,0)"))
+			{
+				echo "<script> alert('You have registered succesfully!');
+						window.location.href = 'index.php?success=reg';
+					</script>";
+			}
+			else
+			{
+				echo "<script> alert('Registration failed. Please try later'); 
+						window.location.href = 'index.php?fail=reg';
+				</script>";
+			}
+		}
+	}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -59,28 +84,28 @@
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <h3 class="py-4 text-center">Sign Up Form</h3>
-                    <form action="">
+                    <form action="" method="post">
                         <div class="fom-group">
                             <label for="firstname">First name</label>
-                            <input type="text" class="form-control form-control-lg">
+                            <input type="text" class="form-control form-control-lg" name="firstname">
                         </div>
                         <div class="form-group">
                             <label for="lastname">Last name</label>
-                            <input type="text" class="form-control form-control-lg">
+                            <input type="text" class="form-control form-control-lg" name="lastname">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control form-control-lg">
+                            <input type="email" class="form-control form-control-lg" name="email">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control form-control-lg">
+                            <input type="password" class="form-control form-control-lg" name="password">
                         </div>
                         <div class="form-group">
                             <label for="password2">Confirm Password</label>
-                            <input type="password" class="form-control form-control-lg">
+                            <input type="password" class="form-control form-control-lg" name="confirm">
                         </div>
-                        <input type="submit" value="Sign Up" class="btn btn-primary btn-lg btn-block">
+                        <input type="submit" value="Sign Up" class="btn btn-primary btn-lg btn-block" name="submit">
                     </form>
                 </div>
             </div>
