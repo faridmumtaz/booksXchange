@@ -4,7 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -14,19 +15,52 @@
    
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark p-3 main-navbar__users">
-        <a href="index.php" class="navbar-brand ml-5">booksXchange</a>
+        <a href="index.php" class="navbar-brand">booksXchange</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item px-3">
+              <a href="books.php" class="nav-link">Books</a>
+            </li>
+            <li class="nav-item px-3">
+              <a href="subjects.php" class="nav-link">Subjects</a>
+            </li>
+            <!-- <li class="nav-item">
               <a href="" class="nav-link"></a>
+            </li> -->
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown mr-3">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <i class="fas fa-user"></i> Welcome Aziz
+              </a>
+              <div class="dropdown-menu">
+                <a href="profile.php" class="dropdown-item">
+                  <i class="fas fa-user-circle"></i> Profile
+                </a>
+                <a href="settings.php" class="dropdown-item">
+                  <i class="fas fa-cog"></i> Settings
+                </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../login.php" class="nav-link">
+                <i class="fas fa-user-times"></i> Logout
+              </a>
             </li>
           </ul>
         </div>
     </nav>
 
+    <div id="wrapper">
+
+      <!-- SIDEBAR --> 
+        
+      <!-- CONTENT --> 
+      
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
