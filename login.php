@@ -78,9 +78,6 @@
                 <div class="col-md-6 mx-auto">
                     <h3 class="py-4 text-center">Login Form</h3>
                     <form action="" method="post">
-                        <div class="fom-group">
-                            <input type="text" class="form-control form-control-lg mb-3" placeholder="Name">
-                        </div>
                         <div class="form-group">
                             <input type="email" class="form-control form-control-lg mb-3" placeholder="Email" name="email">
                         </div>
@@ -94,11 +91,11 @@
         </div>
     </section>
 
-    <br><br>
+    <br><br><br>
    
     <!-- FOOTER SECTION --> 
 
-    <footer id="main-footer" class="p-4">
+    <footer id="main-footer" class="p-4" style="position: fixed;left:0;bottom:0;width:100%">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-6 mx-auto">
@@ -128,5 +125,6 @@
     </script>
   </body>
 </html>
+
 
 
