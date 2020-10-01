@@ -1,21 +1,27 @@
-
 <?php
-    require "dbcon/dbcon.php";
-    if (isset($_POST["submit"])) {
-        if (mysqli_num_rows(mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."'")) == 1) {
-            echo "<span> email already exist </span>";
-        } else {
-            if (mysqli_query($con, "INSERT INTO user VALUES(null,'".$_POST["email"]."',PASSWORD(".$_POST["password"]."),'".$_POST["firstname"]."','".$_POST["lastname"]."',null,'address',null,0)")) {
-                echo "<script> alert('You have registered succesfully!');
+	require "dbcon/dbcon.php";
+	if(isset($_POST["submit"]))
+	{
+		if(mysqli_num_rows(mysqli_query($con,"SELECT * FROM user WHERE email = '".$_POST["email"]."'")) == 1)
+		{
+			echo "<span> email already exist </span>";
+		}
+		else 
+		{
+			if(mysqli_query($con,"INSERT INTO user VALUES(null,'".$_POST["email"]."',PASSWORD(".$_POST["password"]."),'".$_POST["firstname"]."','".$_POST["lastname"]."',null,'address',null,0)"))
+			{
+				echo "<script> alert('You have registered succesfully!');
 						window.location.href = 'index.php?success=reg';
 					</script>";
-            } else {
-                echo "<script> alert('Registration failed. Please try later'); 
+			}
+			else
+			{
+				echo "<script> alert('Registration failed. Please try later'); 
 						window.location.href = 'index.php?fail=reg';
 				</script>";
-            }
-        }
-    }
+			}
+		}
+	}
 ?>
 <!doctype html>
 <html lang="en">
