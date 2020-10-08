@@ -8,7 +8,7 @@
 		{
 			$record = mysqli_fetch_assoc($resultset);
 			$_SESSION["user_login"] = $record["user_id"];
-			header("location:user/main.php");
+			header("location:user/index.php");
 		}
 		else
 		{
