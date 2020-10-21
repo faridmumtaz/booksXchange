@@ -1,3 +1,6 @@
+<?php
+	require "../auth/auth.php";
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,14 +49,14 @@
               </div>
             </li>
             <li class="nav-item">
-              <a href="../login.php" class="nav-link">
+              <a href="logout.php" class="nav-link">
                 <i class="fas fa-user-times"></i> Logout
               </a>
             </li>
           </ul>
         </div>
     </nav>
-
+	<a href="addbook.php"><button class="btn btn-info" style="margin:100px">Add New Book</button></a>
     <div id="wrapper">
 
       <!-- SIDEBAR --> 
@@ -61,7 +64,6 @@
       <!-- CONTENT --> 
       
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
