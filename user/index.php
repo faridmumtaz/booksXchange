@@ -41,9 +41,9 @@
                 <i class="fas fa-user"></i> Welcome Aziz
               </a>
               <div class="dropdown-menu">
-                  <a href="addbook.php" class="dropdown-item">
-                    <i class="fas fa-plus-square"></i> Add Book
-                  </a>
+                <a href="addbook.php" class="dropdown-item">
+                  <i class="fas fa-plus-square"></i> Add Book
+                </a>
                 <a href="profile.php" class="dropdown-item">
                   <i class="fas fa-user-circle"></i> Profile
                 </a>
@@ -65,6 +65,7 @@
       <!-- SIDEBAR --> 
         
       <!-- CONTENT --> 
+      
       
     </div>
     <!-- Optional JavaScript -->
