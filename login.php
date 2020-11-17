@@ -1,20 +1,16 @@
 <?php
-	session_start();
-	require "dbcon/dbcon.php";
-	if(isset($_POST["submit"]))
-	{
-		$resultset = mysqli_query($con,"SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = PASSWORD(".$_POST["password"].")");
-		if(mysqli_num_rows($resultset) == 1)
-		{
-			$record = mysqli_fetch_assoc($resultset);
-			$_SESSION["user_login"] = $record["user_id"];
-			header("location:user/index.php");
-		}
-		else
-		{
-			echo "<span> incorrect username or password </span>";
-		}
-	}
+    session_start();
+    require "dbcon/dbcon.php";
+    if (isset($_POST["submit"])) {
+        $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = PASSWORD(".$_POST["password"].")");
+        if (mysqli_num_rows($resultset) == 1) {
+            $record = mysqli_fetch_assoc($resultset);
+            $_SESSION["user_login"] = $record["user_id"];
+            header("location:user/index.php");
+        } else {
+            echo "<span> incorrect username or password </span>";
+        }
+    }
 ?>
 <!doctype html>
 <html lang="en">
@@ -85,6 +81,9 @@
                             <input type="password" class="form-control form-control-lg mb-3" placeholder="Password" name="password">
                         </div>
                         <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block" name="submit">
+                        <div class="text-center m-4">
+                            Don't have account? <a href="signup.php" class="">Register</a>
+                        </div>
                     </form>
                 </div>
             </div>

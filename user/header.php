@@ -27,7 +27,7 @@
          </form>
          <ul class="navbar-nav ml-auto">
             <li class="nav-item text-nowrap">
-              <a href="#" class="nav-link">
+              <a href="./logout.php" class="nav-link">
               <i class="fas fa-user-times"></i> Logout</a>
             </li>
          </ul>

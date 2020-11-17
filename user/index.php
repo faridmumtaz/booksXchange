@@ -1,6 +1,6 @@
 
 <?php
-	require "../auth/auth.php";
+    require "../auth/auth.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -41,6 +41,9 @@
                 <i class="fas fa-user"></i> Welcome Aziz
               </a>
               <div class="dropdown-menu">
+                  <a href="addbook.php" class="dropdown-item">
+                    <i class="fas fa-plus-square"></i> Add Book
+                  </a>
                 <a href="profile.php" class="dropdown-item">
                   <i class="fas fa-user-circle"></i> Profile
                 </a>
@@ -50,16 +53,15 @@
               </div>
             </li>
             <li class="nav-item">
-              <a href="logout.php" class="nav-link">
+              <a href="./logout.php" class="nav-link">
                 <i class="fas fa-user-times"></i> Logout
               </a>
             </li>
           </ul>
         </div>
     </nav>
-	<a href="addbook.php"><button class="btn btn-info" style="margin:100px">Add New Book</button></a>
     <div id="wrapper">
-
+    
       <!-- SIDEBAR --> 
         
       <!-- CONTENT --> 
