@@ -10,6 +10,9 @@
 		{
 			if(mysqli_query($con,"INSERT INTO user VALUES(null,'".$_POST["email"]."',PASSWORD(".$_POST["password"]."),'".$_POST["firstname"]."','".$_POST["lastname"]."',null,'address',null,0)"))
 			{
+				$resultset = mysqli_query($con,"SELECT * FROM user WHERE email = '".$_POST["email"]."'");
+				$c = mysqli_fetch_assoc($resultset);
+				mkdir("user/".$c["user_id"]);
 				echo "<script> alert('You have registered succesfully!');
 						window.location.href = 'index.php?success=reg';
 					</script>";

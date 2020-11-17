@@ -4,30 +4,37 @@
 	include "../dbcon/dbcon.php";
 	if(isset($_POST["submit"]))
 	{
-		$v = image_validator(strtolower(pathinfo($_FILES["cover"]["name"],PATHINFO_EXTENSION)),$_FILES["cover"]["size"]);
-		if($v == 1)
+		if($_FILES["cover"]["error"] === UPLOAD_ERR_OK)
 		{
-			echo "file type not valid!";
-		}
-		else if($v == 2)
-		{
-			echo "file size not valid!";
-		}
-		else if($v == 0)
-		{
-			move_uploaded_file($_FILES["cover"]["tmp_name"],$_SESSION["user_login"]."/".$_FILES["cover"]["name"]);
+			$v = image_validator(strtolower(pathinfo($_FILES["cover"]["name"],PATHINFO_EXTENSION)),$_FILES["cover"]["size"]);
+			if($v == 1)
+			{
+				echo "file type not valid!";
+			}
+			else if($v == 2)
+			{
+				echo "file size not valid!";
+			}
+			else if($v == 0)
+			{
+				move_uploaded_file($_FILES["cover"]["tmp_name"],$_SESSION["user_login"]."/".$_FILES["cover"]["name"]);
+			}
+			else
+			{
+				echo "An error occurred while uploading file<br>Please try later!";
+			}
+			if(mysqli_query($con,"INSERT INTO book VALUES(NULL,".$_SESSION["user_login"].",'".$_POST["bname"]."','".$_POST["aname"]."',".$_POST["category"].",'".$_SESSION["user_login"]."/".$_FILES["cover"]["name"]."',NULL,NULL)"))
+			{
+				echo "book added successfully";
+			}
+			else
+			{
+				echo "server error";
+			}
 		}
 		else
 		{
-			echo "An error occurred while uploading file<br>Please try later!";
-		}
-		if(mysqli_query($con,"INSERT INTO book VALUES(NULL,".$_SESSION["user_login"].",'".$_POST["bname"]."','".$_POST["aname"]."',".$_POST["category"].",'".$_SESSION["user_login"]."/".$_FILES["cover"]["name"]."',NULL,NULL)"))
-		{
-			echo "book added successfully";
-		}
-		else
-		{
-			echo "server error";
+			echo "invalid file";
 		}
 	}
 ?>
