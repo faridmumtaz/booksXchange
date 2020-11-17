@@ -15,7 +15,7 @@
   <body>
 
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top py-3 shadow" id="main-navbar">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3 shadow" id="main-navbar">
      <a href="#" class="navbar-brand">booksXchange</a>
      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -36,15 +36,15 @@
     </nav>
   
     <!-- Container --> 
-    <div class="container" style="position: relative">
+    <div class="container-fluid">
         <div class="row">
-          <div class="col-md-2 bg-light d-md-block sidebar">
-            <div class="left-sidebar mt-4">
+          <div class="col-md-2 bg-light d-md-block">
+            <div class="mt-4">
               <div class="text-center">
                   <img src="../img/goal.jpg" class="" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover;">
               </div>
               <h4 class="text-center mt-2">Aziz Mohammadi</h4>
-              <ul class="nav flex-column sidebar-nav">
+              <ul class="nav flex-column sidebar-nav smooth-scroll">
                 <li class="nat-item mt-2" style="background-color: #ccc">
                   <a href="addbook.php" class="nav-link">
                     <i class="fas fa-plus-square"></i> Add Book
@@ -73,5 +73,4 @@
               </ul>
             </div>
           </div>
-        </div>
-    </div>
+     

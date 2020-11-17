@@ -25,35 +25,56 @@
     }
 ?>
 		<?php  include "./header.php" ?>
-		<div class="mx-auto" style="">
+		<br><br><br>
+		
+		<div class="col-md-10 mt-4">
+			<h1 class="text-center">Add Your Book</h1>
+			<div class="w-50 mx-auto">
 			<form method="post" enctype="multipart/form-data">
-				<input type="text" name="bname" placeholder="Enter book name"><br>
-				<input type="text" name="aname" placeholder="Enter author name"><br>
-				Select Category<br>
-				<select name="category">
-					<option value="">--CATEGORY--</option>
-					<option value="1">Science</option>
-					<option value="2">Fantasy</option>
-					<option value="3">Adventure</option>
-					<option value="4">Romance</option>
-					<option value="5">Contemporary</option>
-					<option value="6">Mystery</option>
-					<option value="7">Horror</option>
-					<option value="8">Thriller</option>
-					<option value="9">History</option>
-					<option value="10">Cooking</option>
-					<option value="11">Art</option>
-					<option value="12">Motivational</option>
-					<option value="13">Health</option>
-					<option value="14">Travel</option>
-					<option value="15">Guide</option>
-					<option value="16">Children</option>
-				</select><br>
-				Upload Front Cover Photo<br>
-				Photo size must be less then 512 KBs.<br>
-				<input type="file" name="cover">
-				<input type="submit" name="submit">
+				<div class="form-group">
+					<input type="text" class="form-control" name="bname" placeholder="Enter book name">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="aname" placeholder="Enter author name">
+				</div>
+				<div class="form-group">
+					<label for="category">Select Category</label>
+					<select name="category" id="category" class="form-control">
+						<option value="">--CATEGORY--</option>
+						<option value="1">Science</option>
+						<option value="2">Fantasy</option>
+						<option value="3">Adventure</option>
+						<option value="4">Romance</option>
+						<option value="5">Contemporary</option>
+						<option value="6">Mystery</option>
+						<option value="7">Horror</option>
+						<option value="8">Thriller</option>
+						<option value="9">History</option>
+						<option value="10">Cooking</option>
+						<option value="11">Art</option>
+						<option value="12">Motivational</option>
+						<option value="13">Health</option>
+						<option value="14">Travel</option>
+						<option value="15">Guide</option>
+						<option value="16">Children</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="cover">Upload Front Cover Photo</label> 
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" id="cover">
+						<label for="image" class="custom-file-label">Choose File</label>
+					</div>
+					<small class="form-text text-muted">Photo size must be less then 512 KBs.</small>
+				</div>
+				<input type="submit" name="submit" class="btn btn-outline-dark btn-block">
 			</form>
+			</div>
 		</div>
+
+
+</div>
+</div>
+		
 		<?php include_once './footer.php'; ?>
 
