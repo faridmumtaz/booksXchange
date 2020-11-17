@@ -1,0 +1,44 @@
+.form-control-primary {
+    margin: 0;
+    border-right: 2px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 1rem;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 3.1rem 0 0 0.6rem;
+    border-right: 1px solid #d3d3d3; 
+  }
+  
+  .left-sidebar {
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 50px);
+  }
+  .sidebar-nav {
+    margin-top: 10px;
+  }
+  .sidebar-nav li {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .sidebar-nav li:hover,
+  .sidebar-nav li:active {
+    background: #ddd;
+    font-size: 24px;
+  }
+  
+  .sidebar-nav li .nav-link {
+    color: #333;
+    font-weight: 500;
+  }
+  .sidebar-nav .fas {
+    margin-right: 4px;
+  }
+  
+
+ 

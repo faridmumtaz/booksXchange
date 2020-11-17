@@ -1,4 +1,5 @@
 <?php
+
 	require "dbcon/dbcon.php";
 	if(isset($_POST["submit"]))
 	{
@@ -14,17 +15,16 @@
 				$c = mysqli_fetch_assoc($resultset);
 				mkdir("user/".$c["user_id"]);
 				echo "<script> alert('You have registered succesfully!');
+
 						window.location.href = 'index.php?success=reg';
 					</script>";
-			}
-			else
-			{
-				echo "<script> alert('Registration failed. Please try later'); 
+            } else {
+                echo "<script> alert('Registration failed. Please try later'); 
 						window.location.href = 'index.php?fail=reg';
 				</script>";
-			}
-		}
-	}
+            }
+        }
+    }
 ?>
 <!doctype html>
 <html lang="en">
@@ -99,6 +99,10 @@
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" class="form-control form-control-lg" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control form-control-lg" name="address">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
