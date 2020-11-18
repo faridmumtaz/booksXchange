@@ -24,7 +24,8 @@
         }
     }
 ?>
-		<?php  include "./header.php" ?>
+		<?php  include "./header.php";
+        include "./sidebar.php"; ?>
 		<br><br><br>
 		
 		<div class="col-md-10 mt-4">
@@ -62,7 +63,7 @@
 				<div class="form-group">
 					<label for="cover">Upload Front Cover Photo</label> 
 					<div class="custom-file">
-						<input type="file" class="custom-file-input" id="cover">
+						<input type="file" class="custom-file-input" id="cover" name="cover">
 						<label for="image" class="custom-file-label">Choose File</label>
 					</div>
 					<small class="form-text text-muted">Photo size must be less then 512 KBs.</small>
@@ -76,5 +77,8 @@
 </div>
 </div>
 		
-		<?php include_once './footer.php'; ?>
+<?php include_once './footer.php'; ?>
 
+<script type="text/javascript">
+	document.title = "Add Book";
+</script>
