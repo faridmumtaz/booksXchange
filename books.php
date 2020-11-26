@@ -66,10 +66,10 @@
                  <?php while ($book = mysqli_fetch_assoc($books)) { ?>
 
                     <div class="card">
-                        <img src="<?php echo $book['photo']; ?>" alt="book photo" class="card-img-top img-fluid">
+                        <img src="<?php ?>" alt="book photo" class="card-img-top img-fluid">
                         <div class="card-body text-center">
-                            <h6 class="card-title font-weight-bold"><?php echo "<b>".$book["book_name"]; ?></h6>
-                            <h6 class="text-muted p-1"><?php echo $book["author"]; ?></h6>
+                            <h6 class="card-title font-weight-bold"><?php ?></h6>
+                            <h6 class="text-muted p-1"><?php ?></h6>
                         </div>
                     </div>
 
