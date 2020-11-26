@@ -46,25 +46,23 @@
 		<div class="container">
 			<h1 class="text-center mt-3">My Books</h1>
 			<hr>
-		<div class="card-columns">
-				<?php while ($record=mysqli_fetch_assoc($recordset)) { ?>
-				
-						<div class="card">
-							
-								<img src="<?php echo $record["photo"]; ?>" class="card-img-top img-fluid" alt="book photos">
-							<?php
-                                ?>
-								<div class="card-body text-center">
-									<h6 class="card-title font-weight-bold"><?php echo "<b>".$record["book_name"]; ?></h6>
-									<h6 class="text-muted p-1"><?php echo $record["author"]; ?></h6>
-							
-									<a href="editbook.php?id=<?php echo $record['book_id']; ?>" class="btn btn-primary mr-2">Edit Book</a>
-									<a href="book_delete.php?id=<?php echo $record["book_id"]; ?>" class="btn btn-danger ">Delete Book</a>
-								</div>
-							
-						</div>
-				
-			<?php } ?>
+			<div class="card-columns">
+					<?php while ($record=mysqli_fetch_assoc($recordset)) { ?>
+					
+							<div class="card">
+								
+									<img src="<?php echo $record["photo"]; ?>" class="card-img-top img-fluid" alt="book photos">
+									<div class="card-body text-center">
+										<h6 class="card-title font-weight-bold"><?php echo "<b>".$record["book_name"]; ?></h6>
+										<h6 class="text-muted p-1"><?php echo $record["author"]; ?></h6>
+								
+										<a href="editbook.php?id=<?php echo $record['book_id']; ?>" class="btn btn-primary mr-2">Edit Book</a>
+										<a href="book_delete.php?id=<?php echo $record["book_id"]; ?>" class="btn btn-danger ">Delete Book</a>
+									</div>
+								
+							</div>
+					
+					<?php } ?>
 			</div>	
 		</div>		
 	<!-- Modal for edit Profile -->

@@ -33,6 +33,9 @@
                     <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
+                  <a href="books.php" class="nav-link">Books</a>
+                </li>
+                <li class="nav-item">
                     <a href="about.php" class="nav-link active">About</a>
                 </li>
                 <li class="nav-item mr-5">
@@ -58,9 +61,10 @@
       <div class="row mt-4">
         <div class="col-md-8">
           <h3 class="py-4">Books Exchange System</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, aut?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A incidunt fugiat quis debitis nemo possimus sequi, animi aperiam aspernatur fuga sint. Porro aliquam maxime ab placeat fugiat asperiores nostrum dolore!</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquid expedita veritatis omnis laudantium unde et hic non fuga doloremque.</p>
+          <p>Our goal is to ensure that all the books in the world are not just adorning bookshelves,</p>
+          <p>but are used to spread knowledge widely to people for their original purpose.</p>
+          <p>Books are our friends and knowledge partners.</p>
+          <p>bookXchange provides you a new platform to share your wisdom.</p>
         </div>
         <div class="col-md-4 align-self-center">
           <img src="img/book_image1.jpg" alt="" class="img-fluid book-exchange__about">
@@ -78,7 +82,7 @@
             <div class="card p-4">
               <div class="card-body">
                 <h4>Reach Us</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>We values your words.</p>
                 <h4>Address</h4>
                 <p>Pune, Maharashtra, India</p>
                 <h4>Email</h4>

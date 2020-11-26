@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
     <link href="css/style.css" rel="stylesheet">
+    
     <title>booksXchange</title>
   </head>
   <body>
@@ -31,6 +32,9 @@
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="index.php" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="books.php" class="nav-link">Books</a>
                 </li>
                 <li class="nav-item">
                     <a href="about.php" class="nav-link">About</a>
@@ -60,7 +64,7 @@
           <div class="carousel-inner">
             <div class="carousel-item carousel-image-1 active">
               <div class="container">
-                <div class="carousel-caption d-none d-sm-block text-center mb-5" style="color: #000; font-size: 32px;">
+                <div class="carousel-caption d-none d-sm-block text-center">
                     
                 </div>
               </div>
@@ -77,19 +81,19 @@
           <div class="row py-3">
             <div class="col-md-4 mb-4 text-center">
                 <i class="fas fa-hands-helping fa-3x"></i> 
-                <h3>Help Together</h3>
-                <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, qui!</p>
+                <h3>Share your knowledge</h3>
+                <p class="lead">Don't let your precious wisdom sleeps in your bookshelf. Let the knowledge spreads out!</p>
             </div>
             
             <div class="col-md-4 mb-4 text-center">
                 <i class="fas fa-graduation-cap fa-3x"></i>
-                <h3>Improve Knowledge</h3>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, labore?</p>
+                <h3>Make a Profit</h3>
+                <p class="lead">Yes you deserve! We value your shares.Simple sharing and make a profit</p>
             </div>
             <div class="col-md-4 mb-4 text-center">
                 <i class="fas fa-dollar-sign fa-3x"></i>
                 <h3>Save Money</h3>
-                <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, soluta!</p>
+                <p class="lead">Read once and left it in your bookshelf forever? Stop wasting and just borrow from your neighbors with bookXchange</p>
             </div>
           </div>
         </div>
@@ -102,7 +106,7 @@
             <div class="col">
               <div class="container pt-4">
                 <h1>Are You Looking For A Book?</h1>
-                <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, fugiat.</p>
+                <p class="d-none d-md-block">We are ready to deliver your books in one day!</p>
               </div>
             </div>
           </div>
@@ -114,7 +118,7 @@
             <div class="row">
               <div class="col-md-6 align-self-center">
                 <h3>booksXchange</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nobis aliquid ducimus a. Mollitia veritatis itaque error aliquid vitae beatae quas corrupti quidem fugiat,</p>
+                <p>Are you still wondering what exactly we offer? </p>
                 <a href="about.php" class="btn btn-outline-primary btn-lg">Learn More</a>
               </div>
               <div class="col-md-6">
@@ -180,7 +184,7 @@
                 <h2 class="border-bottom py-2">Unlimited Book Landing</h2>
                 <h2 class="border-bottom py-2">Unlimited Book Share</h2>
                 <h2 class="border-bottom py-2">Cancel Any Time</h2>
-                <a href="login.php" class="mt-3 btn btn-outline-primary btn-lg btn-block">Continue</a>
+                <a href="login.php" class="mt-3 btn btn-outline-primary btn-lg btn-block">Subscript Now</a>
             </div>
           </div>
         </div>
@@ -200,12 +204,12 @@
                   <div class="card">
                     <div class="card-header">
                       <h5>
-                        <a href="#Question1" data-toggle="collapse" data-parent="#accordion">Question One ... Lorem ipsum dolor sit.</a>
+                        <a href="#Question1" data-toggle="collapse" data-parent="#accordion">Q. What is Subscription?</a>
                       </h5>
                     </div>
                     <div id="Question1" class="collapse">
                       <div class="card-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                      you will pay just $9 monthly for Unlimited Sharing and borrowing. You can cancel any time through contact us Section. 
                       </div>
                     </div>
                   </div>
@@ -217,12 +221,12 @@
                   <div class="card">
                     <div class="card-header">
                       <h5>
-                        <a href="#Question2" data-toggle="collapse" data-parent="#accordion">Question Two ... Lorem ipsum dolor sit.</a>
+                        <a href="#Question2" data-toggle="collapse" data-parent="#accordion">Q. How can I make a profit by sharing my books?</a>
                       </h5>
                     </div>
                     <div id="Question2" class="collapse">
                       <div class="card-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                      Your registered Books will be delievered to another bookXchanger when they apply. Our delievery guy will come to your door step at your convinient time.
                       </div>
                     </div>
                   </div>
@@ -233,12 +237,12 @@
                 <div class="card">
                   <div class="card-header">
                     <h5>
-                        <a href="#Question3" data-toggle="collapse" data-parent="#accordion">Question Three ... Lorem ipsum dolor sit.</a>
+                        <a href="#Question3" data-toggle="collapse" data-parent="#accordion">Q. What if I damage or lost borrowed books?</a>
                     </h5>
                   </div>
                   <div id="Question3" class="collapse">
                     <div class="card-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                    Unfortunetly, if the book is lost or damaged you have to pay that amount. The book value is set according to preowned market price.
                     </div>
                   </div>
                 </div>
@@ -251,12 +255,12 @@
                 <div class="card">
                   <div class="card-header">
                     <h5>
-                      <a href="#Question4" data-toggle="collapse" data-parent="#accordion">Question Four ... Lorem ipsum dolor sit.</a>
+                      <a href="#Question4" data-toggle="collapse" data-parent="#accordion">Q. How do I extend the book borrowing period? </a>
                     </h5>
                   </div>
                   <div id="Question4" class="collapse">
                     <div class="card-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                    You can apply for extension 2days before the end of the borrowing period.
                     </div>
                   </div>
                 </div>
@@ -267,12 +271,12 @@
               <div class="card">
                 <div class="card-header">
                   <h5>
-                    <a href="#Question5" data-toggle="collapse" data-parent="#accordion">Question Five ... Lorem ipsum dolor sit.</a>
+                    <a href="#Question5" data-toggle="collapse" data-parent="#accordion">Q. How long should I keep the book which I borrowed?</a>
                   </h5>
                 </div>
                 <div id="Question5" class="collapse">
                   <div class="card-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugit ullam cupiditate perferendis aliquam aspernatur?
+                  You can apply for returning book anytime. Auto apply for returning after 30days.
                   </div>
                 </div>
               </div>
@@ -283,12 +287,12 @@
                 <div class="card">
                   <div class="card-header">
                     <h5>
-                      <a href="#Question6" data-toggle="collapse" data-parent="#accordion">Question Six ... Lorem ipsum dolor sit.</a>
+                      <a href="#Question6" data-toggle="collapse" data-parent="#accordion">Q. I want to cancel my subscription. What about my books shared?</a>
                     </h5>
                   </div>
                   <div id="Question6" class="collapse">
                     <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, iusto!
+                    If you subscription cancellation is confirmed. All your books will return to you after the last borrower's borrowing days over.
                     </div>
                   </div>
                 </div>
@@ -307,7 +311,7 @@
             <div class="card p-4">
               <div class="card-body">
                 <h4>Get In Touch</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>We values your words.</p>
                 <h4>Address</h4>
                 <p>Pune, Maharashtra, India</p>
                 <h4>Email</h4>

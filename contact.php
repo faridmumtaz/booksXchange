@@ -33,6 +33,9 @@
                     <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
+                  <a href="books.php" class="nav-link">Books</a>
+                </li>
+                <li class="nav-item">
                     <a href="about.php" class="nav-link">About</a>
                 </li>
                 <li class="nav-item mr-5">
@@ -55,7 +58,7 @@
    
 
     <!-- CONTACT SECTION --> 
-    <section id="contact__about" class="py-4 mt-5">
+    <section id="contact__about" class="py-4 mt-4">
     
       <div class="container p-3" style="background: #97cad2; border-radius: 7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5)">
         <div class="row">
@@ -63,7 +66,7 @@
             <div class="card p-4">
               <div class="card-body">
                 <h4>Reach Us</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>We values your words.</p>
                 <h4>Address</h4>
                 <p>Pune, Maharashtra, India</p>
                 <h4>Email</h4>
@@ -128,7 +131,7 @@
     </section>
     <!-- FOOTER SECTION --> 
 
-    <footer id="main-footer" class="p-4 fixed-bottom">
+    <footer id="main-footer" class="py-4">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-6 mx-auto">
