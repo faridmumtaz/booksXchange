@@ -14,7 +14,7 @@
             } else {
                 echo "An error occurred while uploading file<br>Please try later!";
             }
-            if (mysqli_query($con, "INSERT INTO book VALUES(NULL,".$_SESSION["user_login"].",'".$_POST["bname"]."','".$_POST["aname"]."',".$_POST["category"].",'".$_SESSION["user_login"]."/".$_FILES["cover"]["name"]."',NULL,NULL)")) {
+            if (mysqli_query($con, "INSERT INTO book VALUES(null,".$_SESSION["user_login"].",'".$_POST["bname"]."','".$_POST["aname"]."',".$_POST["category"].",'".$_SESSION["user_login"]."/".$_FILES["cover"]["name"]."',null,NOW())")) {
                 echo "book added successfully";
                 header("location:profile.php");
             } else {

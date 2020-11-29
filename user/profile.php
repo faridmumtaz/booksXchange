@@ -53,7 +53,7 @@
 			<hr>
 			<div class="card-group">
 					<?php while ($record=mysqli_fetch_assoc($recordset)) { ?>
-							<div class="card">
+							<div class="card" style="display:block">
 								<div class="row">
 									<div class="col-md-6">
 										<img src="<?php echo $record["photo"]; ?>" class="card-img-top img-fluid" style="max-height: 400px;" alt="book photos">
