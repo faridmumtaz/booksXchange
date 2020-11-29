@@ -16,6 +16,7 @@
             }
             if (mysqli_query($con, "INSERT INTO book VALUES(NULL,".$_SESSION["user_login"].",'".$_POST["bname"]."','".$_POST["aname"]."',".$_POST["category"].",'".$_SESSION["user_login"]."/".$_FILES["cover"]["name"]."',NULL,NULL)")) {
                 echo "book added successfully";
+                header("location:profile.php");
             } else {
                 echo "server error";
             }

@@ -47,24 +47,29 @@
         $recordset=mysqli_query($con, "SELECT * FROM book WHERE owner_id = ".$_SESSION["user_login"]);
         ?>
 		<div class="container">
+			
 			<h1 class="text-center mt-3">My Books</h1>
+			<h5><a href="index.php"><i class="fas fa-arrow-left"></i> Back to Dashboard</a></h5>
 			<hr>
-			<div class="card-columns">
+			<div class="card-group">
 					<?php while ($record=mysqli_fetch_assoc($recordset)) { ?>
-					
 							<div class="card">
-								
-									<img src="<?php echo $record["photo"]; ?>" class="card-img-top img-fluid" alt="book photos">
-									<div class="card-body text-center">
-										<h6 class="card-title font-weight-bold"><?php echo "<b>".$record["book_name"]; ?></h6>
-										<h6 class="text-muted p-1"><?php echo $record["author"]; ?></h6>
-								
-										<a href="editbook.php?id=<?php echo $record['book_id']; ?>" class="btn btn-primary mr-2">Edit Book</a>
-										<a href="book_delete.php?id=<?php echo $record["book_id"]; ?>" class="btn btn-danger ">Delete Book</a>
+								<div class="row">
+									<div class="col-md-6">
+										<img src="<?php echo $record["photo"]; ?>" class="card-img-top img-fluid" style="max-height: 400px;" alt="book photos">
 									</div>
-								
+									<div class="col-md-6">
+										<div class="card-body">
+											<h6 class="card-title font-weight-bold"><?php echo "<b>".$record["book_name"]; ?></h6>
+											
+											<h6 class="p-1">Author : <span class="text-muted"><?php echo $record["author"]; ?></span></h6>
+									
+											<a href="editbook.php?id=<?php echo $record['book_id']; ?>" class="btn btn-primary mr-2">Edit Book</a>
+											<a href="book_delete.php?id=<?php echo $record["book_id"]; ?>" class="btn btn-danger ">Delete Book</a>
+										</div>
+									</div>	
+								</div>
 							</div>
-					
 					<?php } ?>
 			</div>	
 		</div>		
