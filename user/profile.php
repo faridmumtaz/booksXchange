@@ -51,21 +51,26 @@
 			<h1 class="text-center mt-3">My Books</h1>
 			<h5><a href="index.php"><i class="fas fa-arrow-left"></i> Back to Dashboard</a></h5>
 			<hr>
-			<div class="card-group">
+			<div class="">
 					<?php while ($record=mysqli_fetch_assoc($recordset)) { ?>
-							<div class="card" style="display:block">
-								<div class="row">
+							<div class="" style="display:block">
+								<div class="row bg-light p-3">
 									<div class="col-md-6">
-										<img src="<?php echo $record["photo"]; ?>" class="card-img-top img-fluid" style="max-height: 400px;" alt="book photos">
+										<img src="<?php echo $record["photo"]; ?>" class="" style="height: 400px; width: 300px;" alt="book photos">
 									</div>
 									<div class="col-md-6">
-										<div class="card-body">
-											<h6 class="card-title font-weight-bold"><?php echo "<b>".$record["book_name"]; ?></h6>
+										<div class="mt-4">
+											
+											<h6 class="font-weight-bold">Title : <?php echo "<b>".$record["book_name"]; ?></h6>
 											
 											<h6 class="p-1">Author : <span class="text-muted"><?php echo $record["author"]; ?></span></h6>
-									
-											<a href="editbook.php?id=<?php echo $record['book_id']; ?>" class="btn btn-primary mr-2">Edit Book</a>
-											<a href="book_delete.php?id=<?php echo $record["book_id"]; ?>" class="btn btn-danger ">Delete Book</a>
+											
+											 <h6 class="p-1" style="width: 400px; height: 260px;">Description : <br> <?php echo $record["descript"]; ?></h6>
+											<div class="float-right">
+												<a href="editbook.php?id=<?php echo $record['book_id']; ?>" class="btn btn-primary mr-2">Edit Book</a>
+												<a href="book_delete.php?id=<?php echo $record["book_id"]; ?>" class="btn btn-danger ">Delete Book</a>
+											</div>
+											
 										</div>
 									</div>	
 								</div>

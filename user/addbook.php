@@ -14,7 +14,7 @@
             } else {
                 echo "An error occurred while uploading file<br>Please try later!";
             }
-            if (mysqli_query($con, "INSERT INTO book VALUES(null,".$_SESSION["user_login"].",'".$_POST["bname"]."','".$_POST["aname"]."',".$_POST["category"].",'".$_SESSION["user_login"]."/".$_FILES["cover"]["name"]."',null,NOW())")) {
+            if (mysqli_query($con, "INSERT INTO book VALUES(null,".$_SESSION["user_login"].",'".$_POST["bname"]."','".$_POST["aname"]."','".$_POST['descript']."',".$_POST["category"].",'".$_SESSION["user_login"]."/".$_FILES["cover"]["name"]."',null,NOW())")) {
                 echo "book added successfully";
                 header("location:profile.php");
             } else {
@@ -34,14 +34,17 @@
 			<div class="w-50 mx-auto">
 			<form method="post" enctype="multipart/form-data">
 				<div class="form-group">
-					<input type="text" class="form-control" name="bname" placeholder="Enter book name">
+					<input type="text" class="form-control" name="bname" placeholder="Enter book name" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" name="aname" placeholder="Enter author name">
+					<input type="text" class="form-control" name="aname" placeholder="Enter author name" required>
+				</div>
+				<div class="form-group">
+					<textarea name="descript" id="descript" class="form-control" rows="5" cols="5" placeholder="Add descript..." required></textarea>
 				</div>
 				<div class="form-group">
 					<label for="category">Select Category</label>
-					<select name="category" id="category" class="form-control">
+					<select name="category" id="category" class="form-control" required>
 						<option value="">--CATEGORY--</option>
 						<option value="1">Science</option>
 						<option value="2">Fantasy</option>
@@ -69,7 +72,7 @@
 					</div>
 					<small class="form-text text-muted">Photo size must be less then 512 KBs.</small>
 				</div>
-				<input type="submit" name="submit" class="btn btn-outline-dark btn-block">
+				<input type="submit" name="submit" class="btn btn-outline-dark btn-block mb-4">
 			</form>
 			</div>
 		</div>
