@@ -70,7 +70,9 @@
 									</div>	
 								</div>
 							</div>
+							<br>
 					<?php } ?>
+					
 			</div>	
 		</div>		
 	<!-- Modal for edit Profile -->
