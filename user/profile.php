@@ -18,7 +18,12 @@
         $lastName = $_POST['lastname'];
         $mobileNo = $_POST['mobileno'];
         $address = $_POST['address'];
-        if (move_uploaded_file($_FILES['profile']['tmp_name'], $_SESSION['user_login'].'/'.$_FILES['profile']['name'])) {
+		if($_FILES["profile"]["name"] == "")
+		{
+			mysqli_query($con, "UPDATE user SET firstname='$firstName', lastname='$lastName',mobile_no='$mobileNo',addr='$address' WHERE user_id = ".$_SESSION["user_login"]);
+			header("location:profile.php");
+		}
+        else if (move_uploaded_file($_FILES['profile']['tmp_name'], $_SESSION['user_login'].'/'.$_FILES['profile']['name'])) {
             $image =  $_SESSION['user_login'].'/'.$_FILES['profile']['name'];
             $edit = mysqli_query($con, "UPDATE user SET firstname='$firstName', lastname='$lastName', mobile_no='$mobileNo', addr='$address', profile_photo='$image' WHERE user_id= " .$_SESSION['user_login']);
             header('location:profile.php');
@@ -91,7 +96,7 @@
 						<label for="phoneno">Phone NO</label>
 						<input type="text" class="form-control" name="mobileno" id="phoneno" value="<?php echo $result['mobile_no']; ?>">
 						<label for="address">Address</label>
-						<textarea name="address" id="address" class="form-control mb-3"><?php echo $result['addr'] ?></textarea>
+						<textarea name="address" id="address" class="form-control mb-3"><?php echo $result['addr']; ?></textarea>
 					</div>
 				</div>
 				
