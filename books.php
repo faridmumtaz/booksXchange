@@ -13,7 +13,6 @@
     <title>booksXchange</title>
   </head>
   <body>
-      
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top py-3 main-navbar" id="main-navbar">
             <div class="container">
