@@ -65,7 +65,10 @@
 											
 											<h6 class="p-1">Author : <span class="text-muted"><?php echo $record["author"]; ?></span></h6>
 											
-											 <h6 class="p-1" style="width: 400px; height: 260px;">Description : <br> <?php echo $record["descript"]; ?></h6>
+											 <h6 class="p-1" style="width: 400px; height: 260px;">Description : <p class="text-muted mt-2">
+												 <?php echo $record["descript"]; ?>
+											 </p>
+											</h6>
 											<div class="float-right">
 												<a href="editbook.php?id=<?php echo $record['book_id']; ?>" class="btn btn-primary mr-2">Edit Book</a>
 												<a href="book_delete.php?id=<?php echo $record["book_id"]; ?>" class="btn btn-danger ">Delete Book</a>
@@ -81,7 +84,7 @@
 			</div>	
 		</div>		
 	<!-- Modal for edit Profile -->
-	<div class="modal" id="editProfile">
+	<div class="modal fade mt-5" id="editProfile">
 		<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header bg-primary text-white">

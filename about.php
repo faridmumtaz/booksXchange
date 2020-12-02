@@ -56,7 +56,7 @@
       <br><br>
     
     <!-- ABOUT SECTION --> 
-    <section id="about" class="py-4">
+    <section id="about" class="p-4">
     <div class="container" style="background: #dcdcdc; border-radius: 7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.4)">
       <div class="row mt-4">
         <div class="col-md-8">
@@ -74,13 +74,13 @@
     </section>
 
     <!-- CONTACT SECTION --> 
-    <section id="contact__about" class="py-4">
+    <section id="contact__about" class="p-4">
     
       <div class="container p-3" style="background: #97cad2; border-radius: 7px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5)">
         <div class="row">
           <div class="col-md-4">
-            <div class="card p-4">
-              <div class="card-body">
+            <div class="bg-white p-3 mt-3 rounded">
+              <div class="">
                 <h4>Reach Us</h4>
                 <p>We values your words.</p>
                 <h4>Address</h4>
@@ -93,9 +93,9 @@
             </div>
           </div>
           <div class="col-md-8">
-              <div class="card p-4">
-                <div class="card-body">
-                  <h3 class="text-center mb-4">Leave a Message</h3>
+              <div class="p-4">
+                <div class="">
+                  <h3 class="text-center mb-3">Leave a Message</h3>
                   <form action="">
                     <div class="form-group">
                       <div class="input-group input-group-lg">
@@ -135,37 +135,10 @@
         </div>
       </div>
     </section>
-    <!-- FOOTER SECTION --> 
+    
+     <!-- footer -->
+     <?php include_once "./footer.php" ?>
 
-    <footer id="main-footer" class="p-4">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-6 mx-auto">
-                    <p class="lead">
-                        Copyright &copy; <span id="year"></span> booksXchange
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-    <script>
-        // Get Full Year
-        $('#year').text(new Date().getFullYear());
-
-      // Lightbox Init
-      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-       });
-    </script>
-  </body>
-</html>
+    
 
 

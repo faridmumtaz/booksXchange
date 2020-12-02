@@ -55,7 +55,7 @@
                 <li class="nav-item mr-5">
                     <a href="contact.php" class="nav-link">Contact</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item bg-primary rounded">
                     <a href="login.php" class="nav-link active">
                     <i class="fas fa-sign-in-alt"></i> Login</a>
                 </li>
@@ -71,62 +71,42 @@
     
     <!-- LOGIN FORM --> 
 
-    <section id="login" class="py-5">
+    <section id="login" class="py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <h3 class="py-4 text-center">Login Form</h3>
                     <form action="" method="post">
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-lg mb-3" placeholder="Email" name="email">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                            <input type="email" id="email" class="form-control form-control-lg mb-3" name="email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control form-control-lg mb-3" placeholder="Password" name="password">
+                            <label for="password" data-error="wrong" data-success="right">Password</label>
+                            <input type="password" id="password" class="form-control form-control-lg mb-3" name="password">
                         </div>
                         <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block" name="submit">
                         <div class="text-center m-4">
-                            Don't have account? <a href="signup.php" class="">Register</a>
+                            <p class="font-small text-primary">
+                            Forgot<a href="forgot_password.php" class="blue-text ml-1">Password?</a>
+                            </p>
                         </div>
+                        <div class="text-center mb-3">
+                            <a href="signup.php" class="btn btn-success">Create New Account</a>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <br><br><br>
+    <br>
    
-    <!-- FOOTER SECTION --> 
+    <!-- footer -->
+    <?php include_once "./footer.php" ?>
 
-    <footer id="main-footer" class="p-4" style="position: fixed;left:0;bottom:0;width:100%">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-6 mx-auto">
-                    <p class="lead">
-                        Copyright &copy; <span id="year"></span> booksXchange
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-    <script>
-        // Get Full Year
-        $('#year').text(new Date().getFullYear());
-
-      // Lightbox Init
-      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-       });
-    </script>
-  </body>
-</html>
+   
 
 
 

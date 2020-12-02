@@ -8,11 +8,14 @@
     crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
     <link href="css/style.css" rel="stylesheet">
     <title>booksXchange</title>
   </head>
   <body>
+      <!-- HEADER SECTION --> 
+      
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top py-3 main-navbar" id="main-navbar">
             <div class="container">
@@ -30,10 +33,10 @@
                     <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="books.php" class="nav-link active">Books</a>
+                    <a href="about.php" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.php" class="nav-link">About</a>
+                    <a href="books.php" class="nav-link">Books</a>
                 </li>
                 <li class="nav-item mr-5">
                     <a href="contact.php" class="nav-link">Contact</a>
@@ -42,44 +45,12 @@
                     <a href="login.php" class="nav-link">
                     <i class="fas fa-sign-in-alt"></i> Login</a>
                 </li>
-                <li class="nav-item">
-                    <a href="signup.php" class="nav-link">
+                <li class="nav-item bg-success rounded">
+                    <a href="signup.php" class="nav-link active">
                     <i class="fas fa-user-plus"></i> Sign Up</a>
                 </li>
                 </ul>
             </div>
             </div>
         </nav>
-    
-    <!-- Section Books -->
-    <?php
-        include_once "./dbcon/dbcon.php";
-        $books = mysqli_query($con, "SELECT * FROM book");
-
-    ?>
-    <section id="books" class="py-4 mt-4">
-        <div class="container p-3">
-             <h1 class="text-center mt-3">All Books Are Here</h1>
-             <hr>
-             <div class="card-columns">
-                 <?php while ($book = mysqli_fetch_assoc($books)) { ?>
-
-                    <div class="card">
-                        <img src="<?php ?>" alt="book photo" class="card-img-top img-fluid">
-                        <div class="card-body text-center">
-                            <h6 class="card-title font-weight-bold"><?php ?></h6>
-                            <h6 class="text-muted p-1"><?php ?></h6>
-                        </div>
-                    </div>
-
-                 <?php } ?>
-             </div>
-        </div>
-    </section>
-
-    
-     <!-- footer -->
-     <?php include_once "./footer.php" ?>
-
-
-
+        <br><br>

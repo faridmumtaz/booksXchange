@@ -24,7 +24,7 @@
                     ?>
                 <div class="col-md-4 mx-auto">
                   <div class="card-group">
-                    <img src="<?php echo $result['photo']; ?>" alt="" class="card-img-top" style="width: 300px; height: 400px;">
+                    <img src="<?php echo $result['photo']; ?>" alt="book photo" class="card-img-top" style="width: 300px; height: 400px;">
                     <div class="card-body text-center">
                       <h6 class="card-title font-weight-bold"><?php echo $result['book_name']; ?></h6>
                       <h6 class="text-muted"><?php echo $result['author']; ?></h6>
@@ -33,10 +33,8 @@
                     </div>
                   </div>
                 </div>
-                
                 <?php
                 } ?>
-                
             </div>
         </div>
       </div>
