@@ -30,7 +30,6 @@
 ?>
 
 	<?php include_once "./header.php" ?>
-	
 	<div class="container text-center">
 		<div id="editProfilePage" style="background: #ddd; padding: 1rem; border-radius: 0 0 10px 10px">
 			<div style="position: relative">
@@ -71,7 +70,16 @@
 											</h6>
 											<div class="float-right">
 												<a href="editbook.php?id=<?php echo $record['book_id']; ?>" class="btn btn-primary mr-2">Edit Book</a>
-												<a href="book_delete.php?id=<?php echo $record["book_id"]; ?>" class="btn btn-danger ">Delete Book</a>
+												<script type="text/javascript">
+													function delete_confirmation(id,name)
+													{
+														if(confirm("Are you sure you want to delete "+name))
+														{
+															window.location.href="book_delete.php?id="+id;
+														}
+													}
+												</script>
+					<a class="btn btn-danger " onclick='delete_confirmation("<?php echo $record['book_id']; ?>","<?php echo $record['book_name']; ?>");'>Delete Book</a>
 											</div>
 											
 										</div>
