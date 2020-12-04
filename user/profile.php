@@ -60,7 +60,7 @@
 									<div class="col-md-6">
 										<div class="mt-4">
 											
-											<h6 class="font-weight-bold">Title : <?php echo "<b>".$record["book_name"]; ?></h6>
+											<h6 class="font-weight-bold">Title : <?php echo "<>".$record["book_name"]; ?></h6>
 											
 											<h6 class="p-1">Author : <span class="text-muted"><?php echo $record["author"]; ?></span></h6>
 											

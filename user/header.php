@@ -8,16 +8,18 @@
     crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
     <link href="../css/user-style.css" rel="stylesheet">
+
     <title>booksXchange|dashboard</title>
     
   </head>
   <body>
 
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3 shadow" id="main-navbar">
+  <nav class="navbar navbar-expand-md navbar-dark py-3 shadow" id="main-navbar" style="background-color: #000; color: #fff;">
       <a href="index.php">
-          <img src="img/logo.jpg" alt="Logo" style="width: 120px; height: 50px;">
+          <img src="../img/logo.jpg" alt="Logo" style="width: 120px; height: 50px;">
       </a>
      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
