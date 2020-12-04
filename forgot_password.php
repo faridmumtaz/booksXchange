@@ -5,8 +5,11 @@
         $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."'");
         if (mysqli_num_rows($resultset) == 1) {
             $password = rand(10000000, 99999999);
+			$enc_pass = md5($password);
+			mysqli_query($con,"UPDATE user SET password = '$enc_pass' WHERE email = '".$_POST["email"]."'");
             email_password($password, $_POST["email"]);
-            header("location:index.php");
+            echo "<script>alert('password changed succesfully\nPlease login again'); 
+				window.location.href = 'index.php';</script>";
         } else {
             echo "<span> your email is not registered with us</span>";
         }
