@@ -45,8 +45,8 @@
 
     <section id="contact__about" class="p-4 mt-5">
     
-      <div class="container" style="border-radius: 7px; width:400px; border: 1px   solid #ddd;">
-        <h5 class="p-2 font-weight-bold">Find Your Account</h5>
+      <div class="container" style="display:flex; flex-direction: column; justify-content:center; align-items:  center; border-radius: 7px; width:400px; border: 1px   solid #ddd;">
+        <h5 class="p-2 font-weight-bold mt-4">Find Your Account</h5>
         <hr>
         <p class="text-muted">An email will be send to you with instructions on how to reset your password.</p>
             <div class="row">

@@ -2,7 +2,7 @@
 
 <footer id="main-footer" class="py-3">
         <div class="container text-center">
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex flex-column justify-content-center">
                 <div>
                     <p class="lead">
                         Copyright &copy; <span id="year"></span> booksXchange
@@ -13,17 +13,17 @@
                   <!-- Not showing twitter on mobile screen -->  
                     <div>
                       <a href="https://twitter.com/iamazizmohmdi" class="text-white p-3">
-                        <i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i>
+                        <i class="fab fa-twitter fa-2x"></i>
                       </a>
                     </div>
                     <div>
                       <a href="https://facebook.com/iamazizmohmdi" class="text-white p-3">
-                        <i class="fab fa-facebook fa-2x" style="color: #4267B2;"></i>
+                        <i class="fab fa-facebook fa-2x"></i>
                       </a>
                     </div>
                     <div>
                       <a href="https://instagram.com/iamazizmohmdi" class="text-white p-3">
-                        <i class="fab fa-instagram fa-2x" style="color: #405DE6;"></i>
+                        <i class="fab fa-instagram fa-2x"></i>
                       </a>
                     </div>
                   </div>

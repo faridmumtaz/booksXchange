@@ -17,15 +17,16 @@
               </div>
               <h4 class="text-center mt-2"><?php echo $result['firstname']. "<br>". $result['lastname']; ?></h4>
               <ul class="nav flex-column sidebar-nav smooth-scroll">
+
+                <li class="nav-item mt-2">
+                  <a class="nav-link active" href="profile.php">
+                      <i class="fas fa-user-circle"></i> Profile</a>
+                </li>
+
                 <li class="nat-item mt-2">
                   <a href="addbook.php" class="nav-link">
                     <i class="fas fa-plus-square"></i> Add Book
                   </a>
-                </li>
-                
-                <li class="nav-item mt-2">
-                  <a class="nav-link active" href="profile.php">
-                      <i class="fas fa-user-circle"></i> Profile</a>
                 </li>
                
                 <li class="nav-item">
