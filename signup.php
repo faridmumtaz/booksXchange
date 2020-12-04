@@ -1,25 +1,31 @@
 <?php
-
-    require "dbcon/dbcon.php";
-    if (isset($_POST["submit"])) {
-        if (mysqli_num_rows(mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."'")) == 1) {
-            echo "<span> email already exist </span>";
-        } else {
-            if (mysqli_query($con, "INSERT INTO user VALUES(null,'".$_POST["email"]."',PASSWORD(".$_POST["password"]."),'".$_POST["firstname"]."','".$_POST["lastname"]."',null,'address',null,0)")) {
-                $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."'");
-                $c = mysqli_fetch_assoc($resultset);
-                mkdir("user/".$c["user_id"]);
-                echo "<script> alert('You have registered succesfully!');
-
-						window.location.href = 'index.php?success=reg';
-					</script>";
-            } else {
-                echo "<script> alert('Registration failed. Please try later'); 
-						window.location.href = 'index.php?fail=reg';
-				</script>";
-            }
+	session_start();
+	require "phpmailer/email.php";
+	require "dbcon/dbcon.php";
+	$otp = rand(100000,999999);
+    if (isset($_POST["submit"])) 
+	{
+		$_SESSION["firstname"] = $_POST["firstname"];
+		$_SESSION["lastname"] = $_POST["lastname"];
+		$_SESSION["email"] = $_POST["email"];
+		$_SESSION["address"] = $_POST["address"];
+		$_SESSION["password"] = $_POST["password"];
+		$_SESSION["otp"] = $otp;
+		$email = $_POST["email"];
+		
+		if (mysqli_num_rows(mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."'")) == 1) // checking whether email is already registered
+		{
+            echo "<script type='text/javascript'>alert('Email ID already exist!');</script>";
         }
-    }
+		else if(send_mail($otp,$email))//sending otp in email
+		{
+			echo "<script type='text/javascript'>location.href = 'email_confirm.php'; </script>";
+		}
+		else
+		{
+			echo "<script type='text/javascript'>alert('An error occured\nTry later!');</script>";
+		}
+	}
 ?>
 <!doctype html>
 <html lang="en">
@@ -110,7 +116,7 @@
                             <label for="password2">Confirm Password</label>
                             <input type="password" class="form-control form-control-lg" name="confirm">
                         </div>
-                        <input type="submit" value="Sign Up" class="btn btn-success btn-lg btn-block mb-3" name="submit">
+                        <input type="submit" value="Sign Up" class="btn btn-success btn-lg btn-block mb-3" name="submit" >
                         
                     </form>
                     <div class="text-center mb-3">

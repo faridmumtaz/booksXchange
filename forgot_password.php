@@ -1,14 +1,14 @@
 <?php
-    session_start();
     require "dbcon/dbcon.php";
-    if (isset($_POST["submit"])) {
-        $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = PASSWORD(".$_POST["password"].")");
+	require "phpmailer/email_password.php";
+    if (isset($_POST["forgotPassword"])) {
+        $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."'");
         if (mysqli_num_rows($resultset) == 1) {
-            $record = mysqli_fetch_assoc($resultset);
-            $_SESSION["user_login"] = $record["user_id"];
-            header("location:user/index.php");
+			$password = rand(10000000,99999999);
+			email_password($password,$_POST["email"]);
+			header("location:index.php");
         } else {
-            echo "<span> incorrect username or password </span>";
+            echo "<span> your email is not registered with us</span>";
         }
     }
 ?>
@@ -51,9 +51,9 @@
         <p class="text-muted">An email will be send to you with instructions on how to reset your password.</p>
             <div class="row">
                 <div class="col">
-                    <form class="justify-content-center">
+                    <form class="justify-content-center" method="post">
                         
-                        <input type="email" class="form-control mb-2 mr-2" placeholder="Enter Email">
+                        <input type="email" name="email" class="form-control mb-2 mr-2" placeholder="Enter Email">
                         <button type="submit" name="forgotPassword" class="btn btn-dark btn-block text-uppercase mb-2">Receive New Password By Email</button>
                     </form>
                     <div class="row">

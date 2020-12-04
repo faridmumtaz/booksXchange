@@ -88,7 +88,7 @@
                         <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block" name="submit">
                         <div class="text-center m-4">
                             <p class="font-small text-primary">
-                            Forgot<a href="forgot_password.php" class="blue-text ml-1">Password?</a>
+                            <a href="forgot_password.php" class="blue-text ml-1">Forgot Password?</a>
                             </p>
                         </div>
                         <div class="text-center mb-3">
