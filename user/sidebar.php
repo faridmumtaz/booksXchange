@@ -30,7 +30,7 @@
                 </li>
                
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="change_password.php">
                       <i class="fas fa-cog"></i> Settings</a>
                 </li>
                 <li class="nav-item">
