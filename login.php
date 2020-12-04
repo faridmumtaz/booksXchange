@@ -2,7 +2,8 @@
     session_start();
     require "dbcon/dbcon.php";
     if (isset($_POST["submit"])) {
-        $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = PASSWORD(".$_POST["password"].")");
+		$enc_pass = md5($_POST["password"]);
+        $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = '$enc_pass'");
         if (mysqli_num_rows($resultset) == 1) {
             $record = mysqli_fetch_assoc($resultset);
             $_SESSION["user_login"] = $record["user_id"];
