@@ -55,7 +55,7 @@
 							<div class="" style="display:block">
 								<div class="row bg-light p-3">
 									<div class="col-md-6">
-										<img src="<?php echo $record["photo"]; ?>" class="" style="height: 400px; width: 300px;" alt="book photos">
+										<img src="<?php echo $record["photo"]; ?>" class="" style="max-height: 400px; max-width: 300px;" alt="book photos">
 									</div>
 									<div class="col-md-6">
 										<div class="mt-4">

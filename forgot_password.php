@@ -1,12 +1,12 @@
 <?php
     require "dbcon/dbcon.php";
-	require "phpmailer/email_password.php";
+    require "phpmailer/email_password.php";
     if (isset($_POST["forgotPassword"])) {
         $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."'");
         if (mysqli_num_rows($resultset) == 1) {
-			$password = rand(10000000,99999999);
-			email_password($password,$_POST["email"]);
-			header("location:index.php");
+            $password = rand(10000000, 99999999);
+            email_password($password, $_POST["email"]);
+            header("location:index.php");
         } else {
             echo "<span> your email is not registered with us</span>";
         }
@@ -33,7 +33,9 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top py-3 main-navbar" id="main-navbar">
             <div class="container">
-                <a href="index.php" class="navbar-brand">booksXchange</a>
+            <a href="index.php">
+                <img src="img/logo.jpg" alt="Logo" style="width: 120px; height: 50px;">
+            </a>
                 
             </div>
         </nav>

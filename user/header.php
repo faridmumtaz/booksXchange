@@ -16,7 +16,9 @@
 
 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3 shadow" id="main-navbar">
-     <a href="index.php" class="navbar-brand">booksXchange</a>
+      <a href="index.php">
+          <img src="img/logo.jpg" alt="Logo" style="width: 120px; height: 50px;">
+      </a>
      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>

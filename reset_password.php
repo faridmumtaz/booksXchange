@@ -33,7 +33,9 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top py-3 main-navbar" id="main-navbar">
             <div class="container">
-                <a href="index.php" class="navbar-brand">booksXchange</a>
+            <a href="index.php">
+                <img src="img/logo.jpg" alt="Logo" style="width: 120px; height: 50px;">
+            </a>
                 
             </div>
         </nav>

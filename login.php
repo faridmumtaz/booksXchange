@@ -2,7 +2,7 @@
     session_start();
     require "dbcon/dbcon.php";
     if (isset($_POST["submit"])) {
-		$enc_pass = md5($_POST["password"]);
+        $enc_pass = md5($_POST["password"]);
         $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = '$enc_pass'");
         if (mysqli_num_rows($resultset) == 1) {
             $record = mysqli_fetch_assoc($resultset);
@@ -34,11 +34,13 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top py-3 main-navbar" id="main-navbar">
             <div class="container">
-            <a href="index.php" class="navbar-brand">booksXchange</a>
+            <a href="index.php">
+                <img src="img/logo.jpg" alt="Logo" style="width: 120px; height: 50px;">
+            </a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse ml-4" id="navbarNav">
                 <form action="" class="form-inline">
                 <input type="text" class="form-control mr-2" placeholder="Search Books">
                 <input type="submit" value="Search Books" class="btn btn-outline-light">
@@ -46,9 +48,6 @@
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="index.php" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="books.php" class="nav-link">Books</a>
                 </li>
                 <li class="nav-item">
                     <a href="about.php" class="nav-link">About</a>
@@ -80,21 +79,15 @@
                     <form action="" method="post">
                         <div class="form-group">
                             <label for="email" data-error="wrong" data-success="right">Email</label>
-                            <input type="email" id="email" class="form-control form-control-lg mb-3" name="email">
+                            <input type="email" id="email" class="form-control form-control-lg mb-3" name="email" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="password" data-error="wrong" data-success="right">Password</label>
-                            <input type="password" id="password" class="form-control form-control-lg mb-3" name="password">
+                            <input type="password" id="password" class="form-control form-control-lg mb-3" name="password" autocomplete="off">
                         </div>
                         <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block" name="submit">
                         <div class="text-center m-4">
-<<<<<<< HEAD
                             <a href="forgot_password.php" class="blue-text ml-1">Forgot Password?</a>
-=======
-                            <p class="font-small text-primary">
-                            <a href="forgot_password.php" class="blue-text ml-1">Forgot Password?</a>
-                            </p>
->>>>>>> 88b8753b23736341677a74901e901f6818ebd981
                         </div>
                         <div class="text-center mb-3">
                             <a href="signup.php" class="btn btn-success">Create New Account</a>
