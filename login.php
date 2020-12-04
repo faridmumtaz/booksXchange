@@ -2,7 +2,8 @@
     session_start();
     require "dbcon/dbcon.php";
     if (isset($_POST["submit"])) {
-        $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = PASSWORD(".$_POST["password"].")");
+		$enc_pass = md5($_POST["password"]);
+        $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."' AND password = '$enc_pass'");
         if (mysqli_num_rows($resultset) == 1) {
             $record = mysqli_fetch_assoc($resultset);
             $_SESSION["user_login"] = $record["user_id"];
@@ -87,7 +88,13 @@
                         </div>
                         <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block" name="submit">
                         <div class="text-center m-4">
+<<<<<<< HEAD
                             <a href="forgot_password.php" class="blue-text ml-1">Forgot Password?</a>
+=======
+                            <p class="font-small text-primary">
+                            <a href="forgot_password.php" class="blue-text ml-1">Forgot Password?</a>
+                            </p>
+>>>>>>> 88b8753b23736341677a74901e901f6818ebd981
                         </div>
                         <div class="text-center mb-3">
                             <a href="signup.php" class="btn btn-success">Create New Account</a>
