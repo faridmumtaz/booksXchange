@@ -8,7 +8,8 @@
 			$enc_pass = md5($_POST["password"]);
 			if(mysqli_query($con,"UPDATE user SET password = '$enc_pass' WHERE user_id = ".$_SESSION["user_login"]))
 			{
-				header("location:profile.php");
+				echo "<script>alert('password changed succesfully\nPlease login again'); 
+				window.location.href = 'profile.php';</script>";
 			}
 			else
 			{

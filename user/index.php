@@ -29,7 +29,7 @@
                       <h6 class="card-title font-weight-bold"><?php echo $result['book_name']; ?></h6>
                       <h6 class="text-muted"><?php echo $result['author']; ?></h6>
                       
-                      <button class="btn btn-danger btn-block mt-3">Get It</button>
+                      <a href="getit.php?id=<?php echo $result["book_id"]; ?>"><button class="btn btn-danger btn-block mt-3">Get It</button></a>
                     </div>
                   </div>
                 </div>
