@@ -5,7 +5,8 @@
 	{
 		if($_POST["otp"] == $_SESSION["otp"])
 		{
-			if (mysqli_query($con, "INSERT INTO user VALUES(null,'".$_SESSION["email"]."',PASSWORD(".$_SESSION["password"]."),'".$_SESSION["firstname"]."','".$_SESSION["lastname"]."',null,'".$_SESSION["address"]."','profile_photo.jpg',0)")) 
+			$enc_pass = md5($_SESSION["password"]);
+			if (mysqli_query($con, "INSERT INTO user VALUES(null,'".$_SESSION["email"]."','$enc_pass','".$_SESSION["firstname"]."','".$_SESSION["lastname"]."',null,'".$_SESSION["address"]."','profile_photo.jpg',0)")) 
 			{
                 $resultset = mysqli_query($con, "SELECT * FROM user WHERE email = '".$_SESSION["email"]."'");
                 $c = mysqli_fetch_assoc($resultset);
