@@ -11,9 +11,8 @@
         $_SESSION["password"] = $_POST["password"];
         $_SESSION["otp"] = $otp;
         $email = $_POST["email"];
-        
         if (mysqli_num_rows(mysqli_query($con, "SELECT * FROM user WHERE email = '".$_POST["email"]."'")) == 1) { // checking whether email is already registered
-            echo "<script type='text/javascript'>alert('Email ID already exist!');</script>";
+			echo "<script type='text/javascript'>alert('Email ID already exist!');</script>";
         } elseif (send_mail($otp, $email)) {//sending otp in email
             echo "<script type='text/javascript'>location.href = 'email_confirm.php'; </script>";
         } else {
@@ -77,7 +76,7 @@
         </nav>
       <br><br>
     
-    <!-- LOGIN FORM --> 
+    <!-- singup FORM --> 
 
     <section id="login" class="py-4">
         <div class="container">

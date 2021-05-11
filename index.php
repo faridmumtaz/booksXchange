@@ -23,15 +23,15 @@
         <nav class="navbar navbar-expand-md navbar-dark fixed-top py-3 main-navbar" id="main-navbar">
             <div class="container">
             <a href="index.php">
-              <img src="img/logo.jpg" alt="Logo" style="width: 120px; height: 50px;">
+				<img src="img/logo.jpg" alt="Logo" style="width: 120px; height: 50px;">
             </a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse ml-4" id="navbarNav">
-                <form action="" class="form-inline">
-                <input type="text" class="form-control mr-2" placeholder="Search Books">
-                <input type="submit" value="Search Books" class="btn btn-outline-light">
+                <form method="get" action="" class="form-inline">
+					<input type="text" class="form-control mr-2" placeholder="Search Books">
+					<input type="submit" value="Search Books" class="btn btn-outline-light">
                 </form>
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">

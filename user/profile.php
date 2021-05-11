@@ -59,8 +59,32 @@
 									</div>
 									<div class="col-md-6">
 										<div class="mt-4">
-											
-											<h6 class="font-weight-bold">Title : <?php echo "<>".$record["book_name"]; ?></h6>
+											<div class="btn-group float-right"> <!--- Requests Button --->
+											<?php 
+											$resultset = mysqli_query($con,"SELECT * FROM request WHERE book_id = ".$record['book_id']);
+											?>
+												<button class="badge badge-pill badge-dark dropdown-toggle" data-toggle="dropdown"><?php echo mysqli_num_rows($resultset);?> Requests</button>
+												<div class="dropdown-menu w-30">
+													<?php 
+														
+														if(mysqli_num_rows($resultset) > 0)
+														{
+															while($result = mysqli_fetch_assoc($resultset))
+															{
+																$users = mysqli_query($con,"SELECT * FROM user WHERE user_id = ".$result["user_id"]);
+																$user = mysqli_fetch_assoc($users);
+																echo "<div class='dropdown-item'><b>".$user["firstname"]." ".$user["lastname"]."</b>&nbsp|&nbsp<a href='exchange.php'><button class='btn btn-outline-primary'>Confirm</button></a>&nbsp<button class='btn btn-outline-danger'>Cancel</button></div>";
+								
+															}
+														}
+														else
+														{
+															echo "no request";
+														}
+													?>
+												</div>
+											</div><br><br>
+											<h6 class="font-weight-bold">Title : <?php echo $record["book_name"]; ?></h6>
 											
 											<h6 class="p-1">Author : <span class="text-muted"><?php echo $record["author"]; ?></span></h6>
 											

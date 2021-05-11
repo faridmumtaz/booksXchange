@@ -55,9 +55,25 @@
 							<span class="font-weight-bold">Email : </span><p class="d-inline"><?php echo $user["email"]; ?></p>
 						</div>
 					</div>
-				</div>	
+					
+				</div>
+				
 			</div>
-		</div>
+			<?php 
+			$bid = $_GET["id"];
+			$uid = $_SESSION["user_login"];
+			$resultset = mysqli_query($con, "SELECT * FROM request WHERE book_id = $bid AND user_id = $uid");
+			
+			if(mysqli_num_rows($resultset) == 1)
+			{
+				echo "<a href='undo_req.php?bid=$bid&uid=$uid'><button class='btn btn-primary float-right m-5'>Undo Request</button></a>";
+			}
+			else
+			{
+				echo "<a href='request.php?bid=$bid&uid=$uid'><button class='btn btn-primary float-right m-5'>Request Book </button></a>";
+			}
+			?>
+			</div>
 
 </body>
 </html>

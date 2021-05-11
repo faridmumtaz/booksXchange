@@ -3,7 +3,7 @@ function send_mail($otp,$email)
 {
 	require 'PHPMailerAutoload.php';
 	require 'credential.php';
-	$mail = new PHPMailer;
+	$mail = new PHPMailer(true);
 	//$mail->SMTPDebug = 4;
 	$mail->isSMTP();                                      // Set mailer to use SMTP
 	$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
