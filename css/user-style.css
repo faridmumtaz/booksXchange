@@ -1,0 +1,39 @@
+.form-control-primary {
+    margin: 0;
+    border-right: 2px;
+  }
+  
+  nav {
+    background: #000;
+    color: #fff;
+  }
+  
+ 
+  .sidebar-nav {
+    margin-top: 10px;
+  }
+  .sidebar-nav li {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .sidebar-nav li:hover,
+  .sidebar-nav li:active {
+    background: #ddd;
+    font-size: 1.2rem;
+  }
+  
+  .sidebar-nav li .nav-link {
+    color: #333;
+    font-weight: 500;
+  }
+  .sidebar-nav .fas {
+    margin-right: 4px;
+  }
+
+
+  /*
+  User profile
+
+  */
+ 

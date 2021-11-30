@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 nav {
@@ -18,30 +17,25 @@ nav {
 }
 #main-navbar li:hover,
 #main-navbar li:active {
-  color: #fff;
-  border-bottom: 3px solid #fff;
+  color: rgb(246, 248, 94);
 }
 .navbar .nav-item.active {
     border-left: #444 3px solid;
   }
 .carousel-item {
-    height: 400px;
+    height: 500px;
   }
 
   .carousel-image-1 {
-    background: url('../img/goal.jpg');
+    background: url('../img/book_image1.jpg');
     background-size: cover;
+    margin-top: 90px; 
+    padding: 10px;
+    top: 0;
+    left: 0;
   }
-  
-  .carousel-image-2 {
-    background: url('../img/goal.jpg');
-    background-size: cover;
-  }
-  
-  .carousel-image-3 {
-    background: url('../img/image3.jpg');
-    background-size: cover;
-  }
+
+ 
 
   #lookingbook {
       position: relative;
@@ -67,3 +61,18 @@ nav {
     background: #000;
     color: #fff;
   }
+
+  #subscription a {
+    text-decoration: none;
+  }
+
+  #subscription a:hover,
+  #subscription a:active {
+    color: #ccc;
+  }
+
+.book-exchange__about {
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
