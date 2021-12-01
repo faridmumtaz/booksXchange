@@ -32,7 +32,7 @@
 		<div class="col-md-10 mt-4">
 			<h1 class="text-center">Add Your Book</h1>
 			<div class="w-50 mx-auto">
-			<form method="post" enctype="multipart/form-data">
+			<form method="post" enctype="multipart/form-data" onSubmit="return check_Alpha(this)">
 				<div class="form-group">
 					<input type="text" class="form-control" name="bname" placeholder="Enter book name" required>
 				</div>
@@ -85,4 +85,20 @@
 
 <script type="text/javascript">
 	document.title = "Add Book";
+	function check_Alpha(myform){
+		var regex = /^[a-zA-Z ]+$/;
+		if(regex.test(myform.bname.value) == false){
+			alert("book name must be alphabets only");
+			myform.bname.focus();
+			return false;
+		}
+		else if(regex.test(myform.aname.value) == false){
+			alert("author name must be alphabets only");
+			myform.aname.focus();
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
 </script>

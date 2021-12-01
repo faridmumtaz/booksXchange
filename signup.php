@@ -36,7 +36,7 @@
     <title>booksXchange</title>
     <script>
         function check_Alpha(myform){
-        var regex = /^[a-zA-Z]+$/;
+        var regex = /^[a-zA-Z ]+$/;
         if(regex.test(myform.firstname.value) == false){
             alert("firstname must be alphbets only");
             myform.firstname.focus();
