@@ -34,6 +34,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
     <link href="css/style.css" rel="stylesheet">
     <title>booksXchange</title>
+    <script>
+        function check_Alpha(myform){
+        var regex = /^[a-zA-Z]+$/;
+        if(regex.test(myform.firstname.value) == false){
+            alert("firstname must be alphbets only");
+            myform.firstname.focus();
+            return false;
+        }
+        else if(regex.test(myform.lastname.value) == false){
+            alert("last name must be alphabets only");
+            myform.lastname.focus();
+            return false;
+        }
+        else{
+            return true;
+        }
+        }
+    </script>
   </head>
   <body>
       <!-- HEADER SECTION --> 
@@ -83,30 +101,30 @@
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <h3 class="py-4 text-center">Sign Up Form</h3>
-                    <form action="" method="post">
+                    <form action="" method="post" onSubmit="return check_Alpha(this)">
                         <div class="fom-group">
                             <label for="firstname">First name</label> <span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-lg" name="firstname">
+                            <input type="text" class="form-control form-control-lg" name="firstname" required>
                         </div>
                         <div class="form-group">
                             <label for="lastname">Last name</label> <span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-lg" name="lastname">
+                            <input type="text" class="form-control form-control-lg" name="lastname" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label> <span class="text-danger">*</span>
-                            <input type="email" class="form-control form-control-lg" name="email" autocomplete="off">
+                            <input type="email" class="form-control form-control-lg" name="email" autocomplete="off" required>
                         </div>
                         <div class="form-group">
                             <label for="address">Address</label> <span class="text-danger">*</span>
-                            <input type="text" class="form-control form-control-lg" name="address">
+                            <input type="text" class="form-control form-control-lg" name="address" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label> <span class="text-danger">*</span>
-                            <input type="password" class="form-control form-control-lg" name="password">
+                            <input type="password" class="form-control form-control-lg" name="password" required>
                         </div>
                         <div class="form-group">
                             <label for="password2">Confirm Password</label> <span class="text-danger">*</span>
-                            <input type="password" class="form-control form-control-lg" name="confirm">
+                            <input type="password" class="form-control form-control-lg" name="confirm" required>
                         </div>
                         <input type="submit" value="Sign Up" class="btn btn-success btn-lg btn-block mb-3" name="submit" >
                         
